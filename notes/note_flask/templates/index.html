@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <style>
-        img{
-            height: 200px;
-            width:auto;
+{%extends "base.html"%}
+{%block content%}Home-Flask{%endblock%}
 
-        }
-    </style>
-</head>
-<body>
+{%block body%}
     <h1>Welcome to my first Flask site!</h1>
     <form method="POST">
         <label for="name">enter your name</label>
@@ -23,5 +12,4 @@
     </form>
 </form>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSYBDgWtQVlp7EXoc3nzXKXhvcjmWUkQbXRg&s" alt="galaxy"/>
-</body>
-</html>
+{%endblock%}

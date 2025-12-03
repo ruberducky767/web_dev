@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block content %}{% endblock %}</title>
+    <style>
+        img{
+            height: 200px;
+            width:auto;
+
+        }
+        #nav{
+            margin-bottom: 20px;
+        }
+        #nav a{
+            margin-right: 15px;
+            text-decoration: none;
+            color:#333;
+        }
+        #nav a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1> Flask site</h1>
+   <div id="nav">
+        <a herf="/">Home</a> <p> |</p>
+        <a herf="/contact">Contact</a> <p> |</p>
+        <a herf="/about">About</a> <p> |</p>
+
+   </div>
+   {% block body %}{% endblock %}
+
+</body>
+</html>
