@@ -3,34 +3,38 @@
     <head>
         <meta charset="utf-8" />
         <title>Utah Staycation</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chokokutai&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+
 
         <style>
             body {
-                background-color: rgba(73, 48, 24, 0.62);
-                font-family: "Segoe UI", Tahoma, Geneva, Verdana, cursive;
-                color: #582912;
+                background-color: rgb(129, 76, 41);
+                font-family:Arial, Helvetica, sans-serif;
+                color: rgb(49, 42, 4);
                 margin: 0;
                 padding: 20px;
-                line-height: 1.5;
+                line-height: 2;
+                font-size:20px;
             }
 
             .first {
                 text-align: center;
-                border: 5px outset rgb(90, 78, 10);
+                border: 5px outset rgb(71, 61, 5);
                 border-radius: 10px;
-                background-color: rgba(100, 74, 41, 0.53);
+                background-color: rgba(90, 78, 10);
                 box-shadow: 10px 5px 3px black;
                 width: 50%;
                 margin: 20px auto;
                 padding: 10px;
             }
 
+
+            .first + .first {
+                margin-top: 40px;
+            }
+
             #content-wrapper {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 2fr 1fr;
                 gap: 16px;
                 align-items: start;
                 max-width: 1100px;
@@ -40,6 +44,9 @@
 
             #text-columns {
                 padding: 10px;
+                background: rgba(255,255,255,0.03);
+                border-radius: 8px;
+                border-left: 4px solid rgba(71,61,5,0.6);
             }
 
             #text-columns p {
@@ -48,16 +55,112 @@
 
             }
 
-            #B-17 img {
-                max-width: 100%;
-                height: auto;
-                display: block;
-                margin: 0 auto;
-                border-radius: 6px;
+            .history-box {
+                background: rgb(71, 61, 5);
+                border: 2px solid rgb(71, 61, 5);
+                padding: 10px 14px;
+                border-radius: 8px;
+                font-weight: 700;
+                max-width: 300px;
+                margin-bottom: 12px;
+                color: rgb(243, 236, 224);
             }
 
-            a {
-                color: #2a6fbd;
+            .B-17{
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            }
+
+            .B-17 img {
+                border-radius: 100px;
+            }
+            .B-17 .btn {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(0, 0, 0, 0.45);
+                color: #ffffff;
+                font-size: 16px;
+                padding: 16px 30px;
+                border: none;
+                cursor: pointer;
+                border-radius: 6px;
+                text-align: center;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+            }
+
+            .dino .bton:hover {
+                background-color: rgba(0, 0, 0, 0.308);
+                color: rgb(255, 255, 255);
+            }
+
+            .show-more-btn {
+                background-color: rgb(71, 61, 5);
+                color: #ffffff;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 14px;
+                margin-top: 10px;
+            }
+
+            .show-more-btn:hover {
+                background-color: rgba(71, 61, 5, 0.8);
+            }
+
+             .dino{
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            }
+
+            .dino img {
+                border-radius: 100px;
+            }
+            .dino .bton {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(0, 0, 0, 0.45);
+                color: #ffffff;
+                font-size: 16px;
+                padding: 16px 30px;
+                border: none;
+                cursor: pointer;
+                border-radius: 6px;
+                text-align: center;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+            }
+
+            .dino .bton:hover {
+                background-color: rgba(0, 0, 0, 0.308);
+                color: rgb(255, 255, 255);
+            }
+
+            #dino-section {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+                max-width: 100px;
+                margin: 20px auto;
+                padding: 10px;
+            }
+
+            #dino-section .dino {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            #dino-section ol {
+                padding: 20px;
+                background: rgba(255,255,255,0.03);
+                border-radius: 8px;
+                border-left: 4px solid rgba(71,61,5,0.6);
+                align-self: start;
             }
 
             @media (max-width: 700px) {
@@ -76,23 +179,46 @@
         <h1 class="first">Utah Is Not Plain</h1>
         <div id="content-wrapper">
             <div id="text-columns">
+                <div class="history-box">History</div>
                 <p>
-                    Utah isnt just about the pioneers that crossed to get here. Utah has prehistoric histor of giants rooming the plains of prhistoric Utah.<br>
-                    so if your intrested in the anceint history of Utah then you should go to the  here but maybe your not into that kind of istory but the history of things like<br>
-                    WW2 and 1. if so then maybe you should go to the hill arospace museum.
+                    Utah isn't just about the pioneers that crossed to get here. There have been many soldiers that have been from Utah and you can see some of the plains that the pilots that served used. If so then maybe you should go to the Hill Aerospace Museum, which is a museum full of fighter jets and bombers from WW2. Not interested in that history though? No worries—about 10 minutes away is a natural history museum. The Ogden's George S. Eccles Dinosaur Park has dinosaurs and Native American exhibits.
+                <span class="hidden-text" id="moreText"> so why should you go there? well many people think of Utah as a good place to see stunning canyons and mountains (which is true) but it also has <strong>AMAZING</strong> fossils and some <strong>AMAZING</strong> connections with history. these specific sites are just a few of the many in Utah. so why should you go to these specific sites? well the Hill Aerospace Museum has a wide collection of planes and helicopters from several different years in history including the following aircraft:
+                    <ol id="the list">
+                        <li>a 1:1 scale model of the Wright Brothers plane</li>
+                        <li>a recreation of an N1387V</li>
+                        <li>a recreation P-40N that is made from a crash site</li>
+                        <li>a restored B-17G</li>
+                        <li>a restored model of a Lockheed P-38 Lightning</li>
+                        <li>a replica of a C-124 Globemaster II</li>
+                    </ol>
+                </span>
+                    <button class="show-more-btn" onclick="toggleShowMore()">Show More</button>
+                </p>
+                <script>
+                    function toggleShowMore() {
+                        const moreText = document.getElementById('moreText');
+                        const btn = document.querySelector('.show-more-btn');
+                        moreText.classList.toggle('show');
+                        btn.textContent = moreText.classList.contains('show') ? 'Show Less' : 'Show More';
+                    }
+                </script>
             </div>
 
-            <div id="B-17">
-                <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJHqzD7Ug53lR9sQcitFGa-V8bxyuIUFWvw&s"
-                    alt="B-17 airplane over Utah landscape"
-                />
+            <div class="B-17">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipPzxQxsRc64_w58NxZx4_XXHbSjzbMhJPA897jd=s680-w680-h510-rw"alt="B-17 airplane" width="600" height="400">
+                <a href="https://www.google.com" target="_blank">
+                    <button class="btn">Learn More</button>
+                </a>
+            </div>
+            <div id="dino-section">
+                <div class="dino">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilKtomkI7DUv1F8w4u7D2jbTi5HYmOSyWn5lRtKX5oB_sOY-akpB356qux5UtfNTuhVzcdrUJyGaZmfRF17VeEI4kUR4QQminqhgkYOShpkmTvYS1T4aovUNh94Bu09Wl9GrHqRmzm9ZQ/s1600/dino3939.jpg" alt="Giganotosaurus dinosaur" width="600" height="400">
+                    <a href="https://www.google.com" target="_blank">
+                        <button class="bton">Learn More</button>
+                    </a>
+                </div>
             </div>
         </div>
 
-        <p>
-
-            </a>
-        </p>
     </body>
 </html>
