@@ -74,6 +74,9 @@
 
             .B-17 img {
                 border-radius: 100px;
+                width: 100%;
+                height: auto;
+                max-width: 600px;
             }
             .B-17 .btn {
                 position: absolute;
@@ -110,6 +113,37 @@
             .show-more-btn:hover {
                 background-color: rgba(71, 61, 5, 0.8);
             }
+            .hidden-text {
+                display: none;
+            }
+
+            .hidden-text.show {
+                display: block;
+            }
+
+            .hidden-text ol {
+                margin: 12px 0 0 1.2em;
+            }
+
+            #b17-main {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            #b17-hover {
+                display: none;
+                width: 100%;
+                height: auto;
+            }
+
+            .B-17:hover #b17-main {
+                display: none;
+            }
+
+            .B-17:hover #b17-hover {
+                display: block;
+            }
 
              .dino{
             position: relative;
@@ -140,29 +174,6 @@
                 background-color: rgba(0, 0, 0, 0.308);
                 color: rgb(255, 255, 255);
             }
-
-            #dino-section {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 16px;
-                max-width: 100px;
-                margin: 20px auto;
-                padding: 10px;
-            }
-
-            #dino-section .dino {
-                width: 100%;
-                max-width: 100%;
-            }
-
-            #dino-section ol {
-                padding: 20px;
-                background: rgba(255,255,255,0.03);
-                border-radius: 8px;
-                border-left: 4px solid rgba(71,61,5,0.6);
-                align-self: start;
-            }
-
             @media (max-width: 700px) {
                 .first {
                     width: 90%;
@@ -182,17 +193,18 @@
                 <div class="history-box">History</div>
                 <p>
                     Utah isn't just about the pioneers that crossed to get here. There have been many soldiers that have been from Utah and you can see some of the plains that the pilots that served used. If so then maybe you should go to the Hill Aerospace Museum, which is a museum full of fighter jets and bombers from WW2. Not interested in that history though? No worries—about 10 minutes away is a natural history museum. The Ogden's George S. Eccles Dinosaur Park has dinosaurs and Native American exhibits.
-                <span class="hidden-text" id="moreText"> so why should you go there? well many people think of Utah as a good place to see stunning canyons and mountains (which is true) but it also has <strong>AMAZING</strong> fossils and some <strong>AMAZING</strong> connections with history. these specific sites are just a few of the many in Utah. so why should you go to these specific sites? well the Hill Aerospace Museum has a wide collection of planes and helicopters from several different years in history including the following aircraft:
-                    <ol id="the list">
+                <span class="hidden-text" id="moreText"> So why should you go there? Well, many people think of Utah as a good place to see stunning canyons and mountains (which is true), but it also has <strong>AMAZING</strong> fossils and some <strong>AMAZING</strong> connections with history. These specific sites are just a few of the many in Utah. So why should you go to these specific sites? Well, the Hill Aerospace Museum has a wide collection of planes and helicopters from several different years in history, including the following aircraft:
+                    <ol>
                         <li>a 1:1 scale model of the Wright Brothers plane</li>
                         <li>a recreation of an N1387V</li>
-                        <li>a recreation P-40N that is made from a crash site</li>
+                        <li>a restored P-40N that is made from a crash site</li>
                         <li>a restored B-17G</li>
                         <li>a restored model of a Lockheed P-38 Lightning</li>
                         <li>a replica of a C-124 Globemaster II</li>
                     </ol>
                 </span>
                     <button class="show-more-btn" onclick="toggleShowMore()">Show More</button>
+                     <span class="hidden-text" id="moreText">So why should you go to the Ogden's George S. Eccles Dinosaur Park? Well, because it's an immersive museum that is like a walk in a park full of dinosaurs. It has many different dinosaur models and fossils, and it has amazing scenery.</span>
                 </p>
                 <script>
                     function toggleShowMore() {
@@ -205,15 +217,16 @@
             </div>
 
             <div class="B-17">
-                <img src="https://lh3.googleusercontent.com/p/AF1QipPzxQxsRc64_w58NxZx4_XXHbSjzbMhJPA897jd=s680-w680-h510-rw"alt="B-17 airplane" width="600" height="400">
-                <a href="https://www.google.com" target="_blank">
+                <img id="b17-main" src="https://lh3.googleusercontent.com/p/AF1QipPzxQxsRc64_w58NxZx4_XXHbSjzbMhJPA897jd=s680-w680-h510-rw" alt="B-17 airplane" width="600" height="400">
+                <img id="b17-hover" src="https://airmuseumguide.com/amg/wp-content/uploads/2019/08/Hill_MG_6579.jpg" alt="B-17 airplane interior" width="600" height="400">
+                <a href="https://www.aerospaceutah.org/" target="_blank">
                     <button class="btn">Learn More</button>
                 </a>
             </div>
             <div id="dino-section">
                 <div class="dino">
                     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilKtomkI7DUv1F8w4u7D2jbTi5HYmOSyWn5lRtKX5oB_sOY-akpB356qux5UtfNTuhVzcdrUJyGaZmfRF17VeEI4kUR4QQminqhgkYOShpkmTvYS1T4aovUNh94Bu09Wl9GrHqRmzm9ZQ/s1600/dino3939.jpg" alt="Giganotosaurus dinosaur" width="600" height="400">
-                    <a href="https://www.google.com" target="_blank">
+                    <a href="https://dinosaurpark.org/" target="_blank">
                         <button class="bton">Learn More</button>
                     </a>
                 </div>
